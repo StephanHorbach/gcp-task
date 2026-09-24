@@ -6,13 +6,13 @@ variable "project" {
 variable "region" {
   description = "default region to deploy infrastructure"
   type        = string
-  default     = "eu-central-1"
+  default     = "europe-central2"
 }
 
 variable "zone" {
   type        = string
   description = "The availability zone where the instance will be deployed"
-  default     = "europe-central-1a"
+  default     = "europe-central2-a"
 }
 
 variable "network_name" {
@@ -69,6 +69,6 @@ variable "environment" {
 
 variable "allowed_ports" {
   description = "List of allowed ports"
-  type        = list(any)
+  type        = list(string)
   default     = ["80", "443", "22", "8080"]
 }
